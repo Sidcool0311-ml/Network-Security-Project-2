@@ -8,8 +8,8 @@ def get_requirements()->List[str]:
             line=file.readlines()
             for data in line:
                 requirement=data.strip()
-            if requirement and requirement!="-e .":
-                requirements_list.append(requirement)
+                if requirement and requirement!="-e .":
+                    requirements_list.append(requirement)
 
     except FileNotFoundError:
         print("file not found in the requiremenst.txt")
