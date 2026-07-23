@@ -3,5 +3,15 @@ Name: NETWORK-SECURITY
 Version: 0.0.1
 Author: Siddhant
 Author-email: sidcool0311@gmail.com
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: pymongo
+Requires-Dist: certifi
+Requires-Dist: pymongo[srv]==3.12
+Requires-Dist: sklearn
 Dynamic: author
 Dynamic: author-email
+Dynamic: requires-dist

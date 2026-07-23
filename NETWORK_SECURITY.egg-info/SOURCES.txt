@@ -3,12 +3,18 @@ setup.py
 NETWORK_SECURITY.egg-info/PKG-INFO
 NETWORK_SECURITY.egg-info/SOURCES.txt
 NETWORK_SECURITY.egg-info/dependency_links.txt
+NETWORK_SECURITY.egg-info/requires.txt
 NETWORK_SECURITY.egg-info/top_level.txt
-Network Security/__init__.py
-Network Security/cloud/__init__.py
-Network Security/components/__init__.py
-Network Security/constant/__init__.py
-Network Security/entity/__init__.py
-Network Security/exception/__init__.py
-Network Security/logging/__init__.py
-Network Security/pipeline/__init__.py
+NetworkSecurity/__init__.py
+NetworkSecurity/cloud/__init__.py
+NetworkSecurity/components/__init__.py
+NetworkSecurity/components/data_ingestion.py
+NetworkSecurity/constant/__init__.py
+NetworkSecurity/constant/training_pipeline/__init__.py
+NetworkSecurity/entity/__init__.py
+NetworkSecurity/entity/config_entity.py
+NetworkSecurity/exception/__init__.py
+NetworkSecurity/exception/exception.py
+NetworkSecurity/logger/__init__.py
+NetworkSecurity/logger/logger.py
+NetworkSecurity/pipeline/__init__.py
