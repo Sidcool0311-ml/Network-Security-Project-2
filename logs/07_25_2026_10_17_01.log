@@ -1,0 +1,8 @@
+[2026-07-25 10:17:03,545] INFO NetworkSecurity.logger.logger: Starting the data ingestion pipeline
+[2026-07-25 10:17:03,546] INFO NetworkSecurity.logger.logger: Initiating the data ingestion
+[2026-07-25 10:17:06,553] INFO root: performed split on data
+[2026-07-25 10:17:06,554] INFO root: acquired traina and test data
+[2026-07-25 10:17:06,663] INFO root: Training data saved at: Artifacts\07_25_2026_10_17_03\data_ingestion\ingested\train.csv
+[2026-07-25 10:17:06,663] INFO root: Testing data saved at: Artifacts\07_25_2026_10_17_03\data_ingestion\ingested\test.csv
+[2026-07-25 10:17:06,664] INFO root: Data ingestion completed successfully
+[2026-07-25 10:17:06,668] INFO NetworkSecurity.logger.logger: Data ingestion completed successfully

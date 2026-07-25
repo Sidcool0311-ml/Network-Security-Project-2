@@ -1,5 +1,5 @@
 from NetworkSecurity.exception.exception import CustomException
-import logging
+from NetworkSecurity.logger.logger import logging
 from NetworkSecurity.entity.config_entity import DataIngestionConfig
 from NetworkSecurity.entity.artifact_entity import DataIngestionArtifact
 import os
@@ -40,27 +40,59 @@ class DataIngestion:
         
     def export_data_feature_store(self,dataframe:pd.DataFrame):
         try:
-            feature_store_file_path=self.data_ingestion_config.feature_Store_file_path
+            feature_store_file_path=self.data_ingestion_config.feature_store_file_path
             ##creating a folder
-            dir_path=os.path.join(feature_store_file_path)
+            dir_path = os.path.dirname(feature_store_file_path)
             os.makedirs(dir_path,exist_ok=True)
-            dataframe.to_csv(feature_store_file_path)
+            print("Feature store file path:", feature_store_file_path)
+            print("Directory path:", dir_path)
+            
+            dataframe.to_csv(feature_store_file_path,index=False,header=True)
             return dataframe
         
         except Exception as e:
             raise CustomException(e,sys)
         
     def split_data_as_train_test(self,dataframe=pd.DataFrame):
-        try:
-            train_set,test_set=train_test_split(dataframe,test_size=self.data_ingestion_config.train_test_split_ratio)
-            logging.info("performed split on data")
-            logging.info("acquired traina and test data")
+            try:
+
+                
+               train_set,test_set=train_test_split(dataframe,test_size=self.data_ingestion_config.train_test_split_ratio)
+               logging.info("performed split on data")
+               logging.info("acquired traina and test data")
 
             
-            dir_path=os.path.dirname(self.data_ingestion_config.training_file_path)
-            
-        except Exception as e:
-            raise CustomException(e,sys)
+               dir_path=os.path.dirname(self.data_ingestion_config.training_file_path)
+               os.makedirs(dir_path, exist_ok=True)
+               train_set.to_csv(
+               self.data_ingestion_config.training_file_path,
+               index=False
+        )
+
+        # Save test data
+               test_set.to_csv(
+               self.data_ingestion_config.testing_file_path,
+             index=False
+        )
+
+               logging.info(
+            f"Training data saved at: "
+            f"{self.data_ingestion_config.training_file_path}"
+        )
+
+               logging.info(
+            f"Testing data saved at: "
+            f"{self.data_ingestion_config.testing_file_path}"
+        )
+
+               return DataIngestionArtifact(
+              trained_file_path=self.data_ingestion_config.training_file_path,
+              test_file_path=self.data_ingestion_config.testing_file_path
+        )
+            except Exception as e:
+                raise CustomException(e,sys)
+    
+        
             
     
     def initiate_data_ingestion(self):
