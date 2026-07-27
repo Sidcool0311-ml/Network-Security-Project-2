@@ -1,8 +1,9 @@
 from NetworkSecurity.components.data_ingestion import DataIngestion
-from NetworkSecurity.logger.logger import logger
+from NetworkSecurity.logger.logger import logging
 from NetworkSecurity.exception.exception import CustomException
 import sys
-
+from NetworkSecurity.entity.config_entity import DataValidationConfig
+from NetworkSecurity.components.data_validation import DataValidation
 from NetworkSecurity.entity.config_entity import (
     DataIngestionConfig,
     TrainingPipelineConfig
@@ -13,7 +14,7 @@ if __name__ == "__main__":
 
     try:
 
-        logger.info("Starting the data ingestion pipeline")
+        logging.info("Starting the data ingestion pipeline")
 
         trainingpipelineconfig = TrainingPipelineConfig()
 
@@ -25,22 +26,23 @@ if __name__ == "__main__":
             data_ingestion_config
         )
 
-        logger.info("Initiating the data ingestion")
+        logging.info("Initiating the data ingestion")
 
         dataingestionartifact = (
             data_ingestion.initiate_data_ingestion()
         )
 
-        logger.info(
+        logging.info(
             "Data ingestion completed successfully"
         )
 
         print(dataingestionartifact)
+        data_validation_config=DataValidationConfig(trainingpipelineconfig)
+        data_validation=DataValidation(data_validation_config,dataingestionartifact)
+        logging.info("Initiate the data Validation")
+        data_validation_artifact=data_validation.initiate_data_validation()
+        logging.info("data Validation Completed")
+        print(data_validation_artifact)
 
     except Exception as e:
-
-        logger.exception(
-            "Error occurred during data ingestion"
-        )
-
         raise CustomException(e, sys)

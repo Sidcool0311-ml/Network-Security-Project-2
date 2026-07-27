@@ -1,0 +1,13 @@
+[2026-07-27 10:56:05,353] INFO root: Starting the data ingestion pipeline
+[2026-07-27 10:56:05,354] INFO root: Initiating the data ingestion
+[2026-07-27 10:56:09,425] INFO root: performed split on data
+[2026-07-27 10:56:09,425] INFO root: acquired traina and test data
+[2026-07-27 10:56:09,534] INFO root: Training data saved at: Artifacts\07_27_2026_10_56_05\data_ingestion\ingested\train.csv
+[2026-07-27 10:56:09,535] INFO root: Testing data saved at: Artifacts\07_27_2026_10_56_05\data_ingestion\ingested\test.csv
+[2026-07-27 10:56:09,535] INFO root: Data ingestion completed successfully
+[2026-07-27 10:56:09,539] INFO root: Data ingestion completed successfully
+[2026-07-27 10:56:09,545] INFO root: Initiate the data Validation
+[2026-07-27 10:56:09,620] INFO root: total no of required columns2
+[2026-07-27 10:56:09,620] INFO root: total columns in dataframe 31
+[2026-07-27 10:56:09,621] INFO root: total no of required columns2
+[2026-07-27 10:56:09,621] INFO root: total columns in dataframe 31
