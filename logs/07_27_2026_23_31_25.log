@@ -1,0 +1,23 @@
+[2026-07-27 23:31:27,351] INFO root: Starting the data ingestion pipeline
+[2026-07-27 23:31:27,352] INFO root: Initiating the data ingestion
+[2026-07-27 23:31:30,911] INFO root: performed split on data
+[2026-07-27 23:31:30,911] INFO root: acquired traina and test data
+[2026-07-27 23:31:31,017] INFO root: Training data saved at: Artifacts\07_27_2026_23_31_27\data_ingestion\ingested\train.csv
+[2026-07-27 23:31:31,017] INFO root: Testing data saved at: Artifacts\07_27_2026_23_31_27\data_ingestion\ingested\test.csv
+[2026-07-27 23:31:31,018] INFO root: Data ingestion completed successfully
+[2026-07-27 23:31:31,022] INFO root: Data ingestion completed successfully
+[2026-07-27 23:31:31,027] INFO root: Initiate the data Validation
+[2026-07-27 23:31:31,105] INFO root: total no of required columns2
+[2026-07-27 23:31:31,105] INFO root: total columns in dataframe 31
+[2026-07-27 23:31:31,105] INFO root: total no of required columns2
+[2026-07-27 23:31:31,105] INFO root: total columns in dataframe 31
+[2026-07-27 23:31:31,224] INFO root: drift report statusTrue
+[2026-07-27 23:31:31,370] INFO root: data validation completed
+[2026-07-27 23:31:31,371] INFO root: data Validation Completed
+[2026-07-27 23:31:31,372] INFO root: data Transformation started
+[2026-07-27 23:31:31,372] INFO root: started the data initiaion step
+[2026-07-27 23:31:31,452] INFO root: entered get_data_tranform method
+[2026-07-27 23:31:31,452] INFO root: intialized KNN imputer
+[2026-07-27 23:31:31,518] INFO root: entered the save_object method of main.utils class
+[2026-07-27 23:31:31,523] INFO root: pickle file loaded
+[2026-07-27 23:31:31,525] INFO root: data Transformation completed
