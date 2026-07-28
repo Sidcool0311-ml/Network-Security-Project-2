@@ -1,0 +1,28 @@
+[2026-07-28 18:30:42,467] INFO root: Starting the data ingestion pipeline
+[2026-07-28 18:30:42,468] INFO root: Initiating the data ingestion
+[2026-07-28 18:30:45,642] INFO root: performed split on data
+[2026-07-28 18:30:45,642] INFO root: acquired traina and test data
+[2026-07-28 18:30:45,751] INFO root: Training data saved at: Artifacts\07_28_2026_18_30_42\data_ingestion\ingested\train.csv
+[2026-07-28 18:30:45,751] INFO root: Testing data saved at: Artifacts\07_28_2026_18_30_42\data_ingestion\ingested\test.csv
+[2026-07-28 18:30:45,752] INFO root: Data ingestion completed successfully
+[2026-07-28 18:30:45,756] INFO root: Data ingestion completed successfully
+[2026-07-28 18:30:45,761] INFO root: Initiate the data Validation
+[2026-07-28 18:30:45,832] INFO root: total no of required columns2
+[2026-07-28 18:30:45,832] INFO root: total columns in dataframe 31
+[2026-07-28 18:30:45,832] INFO root: total no of required columns2
+[2026-07-28 18:30:45,832] INFO root: total columns in dataframe 31
+[2026-07-28 18:30:45,919] INFO root: drift report statusTrue
+[2026-07-28 18:30:46,040] INFO root: data validation completed
+[2026-07-28 18:30:46,041] INFO root: data Validation Completed
+[2026-07-28 18:30:46,041] INFO root: data Transformation started
+[2026-07-28 18:30:46,041] INFO root: started the data initiaion step
+[2026-07-28 18:30:46,120] INFO root: entered get_data_tranform method
+[2026-07-28 18:30:46,120] INFO root: intialized KNN imputer
+[2026-07-28 18:30:46,165] INFO root: entered the save_object method of main.utils class
+[2026-07-28 18:30:46,169] INFO root: pickle file loaded
+[2026-07-28 18:30:46,170] INFO root: data Transformation completed
+[2026-07-28 18:30:46,170] INFO root: Model Training sstared
+[2026-07-28 18:50:18,325] INFO root: entered the save_object method of main.utils class
+[2026-07-28 18:50:18,327] INFO root: pickle file loaded
+[2026-07-28 18:50:18,327] INFO root: Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\07_28_2026_18_30_42\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassifcationMetricArtifact(f1_score=0.9913710450623202, precision_score=0.9887267237040765, recall_score=0.9940295486743574), test_metric_artifact=ClassifcationMetricArtifact(f1_score=0.9854418700020504, precision_score=0.9828220858895705, recall_score=0.9880756578947368))
+[2026-07-28 18:50:18,333] INFO root: Model Training artifact created
